@@ -2,14 +2,21 @@ const form = document.getElementById("loginForm");
 const usuario = document.getElementById("usuario");
 const senha = document.getElementById("senha");
 const mensagem = document.getElementById("mensagem");
+
 form.addEventListener("submit", (e) => {
-e.preventDefault(); // evita o recarregamento da página
-if (usuario.value === "" || senha.value === "") {
-mensagem.textContent = "Preencha todos os campos!";
-} else if (usuario.value === "adm" && senha.value === "123") {
-mensagem.style.color = "#03dac6";
-mensagem.textContent = "Login realizado com sucesso!";
-} else {
-mensagem.textContent = "Usuário ou senha incorretos.";
-}
+  e.preventDefault(); // evita o recarregamento da página
+
+  if (usuario.value === "" || senha.value === "") {
+    mensagem.textContent = "Preencha todos os campos!";
+  } else if (usuario.value === "adm" && senha.value === "123") {
+    mensagem.style.color = "#03dac6";
+    mensagem.textContent = "Login realizado com sucesso!";
+
+    localStorage.setItem("usuarioLogado", usuario.value); // salva o usuário
+    setTimeout(() => {
+      window.location.href = "dashboard.html"; // redireciona
+    }, 1000); // espera 1 segundo pra mostrar a mensagem antes de sair da página
+  } else {
+    mensagem.textContent = "Usuário ou senha incorretos.";
+  }
 });
