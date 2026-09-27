@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Bem-vindo(a), <span id="nomeUsuario">Usuário</span>!</h1>
+      <p class="subtitulo">Você está logado no sistema.</p>
+    </header>
+ 
+    <nav class="dashboard-menu">
+      <a href="dashboard.html" class="menu-item ativo">Início</a>
+      <a href="cadastro.html" class="menu-item">Cadastro de usuário</a>
+      <a href="index.html" class="menu-item sair">Sair</a>
+    </nav>
+ 
+    <main class="dashboard-conteudo">
+      <div class="card">
+        <h2>Resumo</h2>
+        <p>Esta é a sua área principal. A partir daqui você poderá acessar as
+        demais funcionalidades do sistema.</p>
+      </div>
+    </main>
+  </div>
+ 
+  <script>
+    // Recupera o nome do usuário salvo no login (se existir) e exibe na saudação
+    const usuarioSalvo = localStorage.getItem("usuarioLogado");
+    if (usuarioSalvo) {
+      document.getElementById("nomeUsuario").textContent = usuarioSalvo;
+    }
+  </script>
+</body>
+</html>
