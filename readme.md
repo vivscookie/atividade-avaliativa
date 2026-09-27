@@ -48,6 +48,6 @@ integrados.
  
 ## 🔗 Links
  
-- [Repositório] (https://github.com/vivscookie/atividade-avaliativa)
+- [Repositório](https://github.com/vivscookie/atividade-avaliativa)
 - [Site hospedado no GitHub Pages](https://vivscookie.github.io/atividade-avaliativa/)
  
