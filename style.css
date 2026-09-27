@@ -39,3 +39,73 @@ margin-top: 10px;
 color: #ff5252;
 font-weight: bold;
 }
+
+.dashboard-container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+}
+ 
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+.dashboard-header .subtitulo {
+  color: #b0b0b0;
+  margin-top: 5px;
+}
+ 
+.dashboard-menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+ 
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  transition: background-color 0.2s;
+}
+ 
+.menu-item:hover,
+.menu-item.ativo {
+  background-color: #03dac6;
+  color: #000;
+  font-weight: bold;
+}
+ 
+.menu-item.sair {
+  background-color: #2a2a2a;
+}
+ 
+.menu-item.sair:hover {
+  background-color: #ff5252;
+  color: #fff;
+}
+ 
+.dashboard-conteudo .card {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+ 
+.voltar-login {
+  text-align: center;
+  margin-top: 10px;
+}
+ 
+.voltar-login a {
+  color: #03dac6;
+  text-decoration: none;
+}
+ 
+.voltar-login a:hover {
+  text-decoration: underline;
+}
